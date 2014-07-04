@@ -27,14 +27,26 @@ from games import Game
 class Game1(Game):
 
 	def get_test_data(self):
-		return [([2, 7, 11, 15], 9)]
+		return [([2, 7, 11, 15], 9), ([0, 2, 0], 0), ([1, 6, 2], 3)]
 
 def jason_solver((num, target)):
-	for i in xrange(100):
-		pass
+	snum = sorted(num)
+	i, j = 0, len(snum) - 1
+	while i < j:
+		if snum[i] + snum[j] > target:
+			j -= 1
+		elif snum[i] + snum[j] < target:
+			i += 1
+		else:
+			i1, i2 = num.index(snum[i]), num.index(snum[j])
+			if i1 == i2:
+				i2 = num[i1 + 1:].index(snum[i]) + i1 + 1
+			return (min(i1, i2) + 1, max(i1, i2) + 1)
+	return None
 
 def iCode_solver((num, target)):
-	pass
+	for i in xrange(10000):
+		pass
 
 game1 = Game1()
 game1.add_solver(jason_solver, 'Jason')
