@@ -5,8 +5,9 @@
 ##题目及胜者
 
 * game 1 : [two-sum](https://oj.leetcode.com/problems/two-sum/)'s winner is Jason  
+* game 3 : [Longest Substring Without Repeating Characters ](https://oj.leetcode.com/problems/longest-substring-without-repeating-characters/)'s winner is Jason  
 * game 2 : [Median of Two Sorted Arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/)'s winner is Jason  
 
 ##最终胜者
 
-Jason with win 2 in total 2 games.  
+Jason with win 3 in total 3 games.  
