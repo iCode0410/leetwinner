@@ -48,6 +48,6 @@ def iCode_solver((num, target)):
 	for i in xrange(10000):
 		pass
 
-game1 = Game1()
+game1 = Game1(1, 'two-sum', 'https://oj.leetcode.com/problems/two-sum/')
 game1.add_solver(jason_solver, 'Jason')
 game1.add_solver(iCode_solver, 'iCode')

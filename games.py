@@ -11,7 +11,10 @@ class Game(object):
 
     __metaclass__ = ABCMeta
 
-    def __init__(self, solvers = [], solver_names = []):
+    def __init__(self, game_num, game_name, game_link, solvers = [], solver_names = []):
+        self.game_num = game_num
+        self.game_name = game_name
+        self.game_link = game_link
         self.solvers = [(solvers[i], solver_names[i]) for i in xrange(len(solvers))]
         self.index = -1
 

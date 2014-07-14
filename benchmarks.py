@@ -24,7 +24,7 @@ def benchmark_game1(counter):
         if faster == None or faster[0] > t1:
             faster = (t1, game1.currents_solvername())
     counter.count_winner(faster[1])
-    rewriter.rewrite_onerecord(faster[1], 1, 'two-sum', 'https://oj.leetcode.com/problems/two-sum/', fo)
+    rewriter.rewrite_onerecord(faster[1], game1.game_num, game1.game_name, game1.game_link, fo)
     return counter
 
 def final(counter, total):
