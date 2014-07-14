@@ -1,0 +1,13 @@
+def benchmark_game1(counter):
+    from game1 import game1
+    faster = None
+    counter.add_users(game1.get_solver_users())
+    for i in xrange(game1.total_solver()):
+        game1.goto_next()
+        t = timeit.Timer("game1.run()", "from game1 import game1")
+        t1 = t.timeit(number=loops)
+        if faster == None or faster[0] > t1:
+            faster = (t1, game1.currents_solvername())
+    counter.count_winner(faster[1])
+    rewriter.rewrite_onerecord(faster[1], game1.game_num, game1.game_name, game1.game_link, fo)
+    return counter

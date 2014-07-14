@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+#
+# Jasonwbw@yahoo.com
+
+import timeit
+import time
+from readme_rewrite import Rewriter
+from winner_counter import WinnerCounter
+
+loops = 1000
+
+fo = open('./README.md', 'w')
+rewriter = Rewriter(fo)
+
