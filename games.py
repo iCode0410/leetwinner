@@ -15,6 +15,9 @@ class Game(object):
         self.solvers = [(solvers[i], solver_names[i]) for i in xrange(len(solvers))]
         self.index = -1
 
+    def get_solver_users(self):
+        return [user for solver, user in self.solvers]
+
     def add_solver(self, func, nickname):
         self.solvers.append((func, nickname))
 
