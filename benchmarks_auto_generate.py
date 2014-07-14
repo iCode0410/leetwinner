@@ -21,6 +21,6 @@ if __name__ == '__main__':
         if re.search('game[0-9]+.py$', filename):
             func = lambda x : x.replace('game1', filename.replace('.py', ''))
             load_and_write('./benchmarks.py.body', fo, func = func)
-            fo.write('\n')
+            fo.write('\n\n')
     load_and_write('./benchmarks.py.footer', fo)
     fo.close()

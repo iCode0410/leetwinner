@@ -1,4 +1,3 @@
-
 def final(counter, total):
     finalwinner, num = counter.final_winner()
     rewriter.rewrite_winner(finalwinner, num, total, fo)
