@@ -55,6 +55,20 @@ def benchmark_game3(counter):
     rewriter.rewrite_onerecord(faster[1], game3.game_num, game3.game_name, game3.game_link, fo)
     return counter
 
+def benchmark_game4(counter):
+    from game4 import game4
+    faster = None
+    counter.add_users(game4.get_solver_users())
+    for i in xrange(game4.total_solver()):
+        game4.goto_next()
+        t = timeit.Timer("game4.run()", "from game4 import game4")
+        t1 = t.timeit(number=loops)
+        if faster == None or faster[0] > t1:
+            faster = (t1, game4.currents_solvername())
+    counter.count_winner(faster[1])
+    rewriter.rewrite_onerecord(faster[1], game4.game_num, game4.game_name, game4.game_link, fo)
+    return counter
+
 def final(counter, total):
     finalwinner, num = counter.final_winner()
     rewriter.rewrite_winner(finalwinner, num, total, fo)
