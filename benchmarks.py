@@ -97,6 +97,34 @@ def benchmark_game7(counter):
     rewriter.rewrite_onerecord(faster[1], game7.game_num, game7.game_name, game7.game_link, fo)
     return counter
 
+def benchmark_game8(counter):
+    from game8 import game8
+    faster = None
+    counter.add_users(game8.get_solver_users())
+    for i in xrange(game8.total_solver()):
+        game8.goto_next()
+        t = timeit.Timer("game8.run()", "from game8 import game8")
+        t1 = t.timeit(number=loops)
+        if faster == None or faster[0] > t1:
+            faster = (t1, game8.currents_solvername())
+    counter.count_winner(faster[1])
+    rewriter.rewrite_onerecord(faster[1], game8.game_num, game8.game_name, game8.game_link, fo)
+    return counter
+
+def benchmark_game9(counter):
+    from game9 import game9
+    faster = None
+    counter.add_users(game9.get_solver_users())
+    for i in xrange(game9.total_solver()):
+        game9.goto_next()
+        t = timeit.Timer("game9.run()", "from game9 import game9")
+        t1 = t.timeit(number=loops)
+        if faster == None or faster[0] > t1:
+            faster = (t1, game9.currents_solvername())
+    counter.count_winner(faster[1])
+    rewriter.rewrite_onerecord(faster[1], game9.game_num, game9.game_name, game9.game_link, fo)
+    return counter
+
 def final(counter, total):
     finalwinner, num = counter.final_winner()
     rewriter.rewrite_winner(finalwinner, num, total, fo)

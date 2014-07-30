@@ -13,6 +13,8 @@
 ##题目及胜者
 
 * game 4 : [Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/)'s winner is Jason  
+* game 9 : [Palindrome Number](https://oj.leetcode.com/problems/palindrome-number/)'s winner is Jason  
+* game 8 : [String to Integer (atoi) ](https://oj.leetcode.com/problems/string-to-integer-atoi/)'s winner is Jason  
 * game 6 : [ZigZag Conversion](https://oj.leetcode.com/problems/zigzag-conversion/)'s winner is Jason  
 * game 1 : [two-sum](https://oj.leetcode.com/problems/two-sum/)'s winner is Jason  
 * game 3 : [Longest Substring Without Repeating Characters ](https://oj.leetcode.com/problems/longest-substring-without-repeating-characters/)'s winner is Jason  
@@ -21,4 +23,4 @@
 
 ##最终胜者
 
-Jason with win 6 in total 6 games.  
+Jason with win 8 in total 8 games.  
